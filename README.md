@@ -4,7 +4,7 @@
 
 ## Decoor
 
-This application can be  accessed using the link  [Decoor](https://decoor.netlify.app/).
+This application can be  accessed using the link  [Decorrr](https://decorrr.netlify.app/).
 
 </div>
 
