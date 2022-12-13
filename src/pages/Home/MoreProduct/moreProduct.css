@@ -1,0 +1,16 @@
+.more-section{
+    width: 100%;
+    height: 35rem;
+    margin: 6rem 0 6rem 0;
+    position: relative;
+}
+.more-section-btn{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+}
+.more-section-btn h2{
+color: var(--brand-color-shade-6);
+}

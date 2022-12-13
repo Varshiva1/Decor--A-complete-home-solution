@@ -1,0 +1,32 @@
+.empty-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.empty-text{
+text-align: center;
+}
+.empty-text span {
+    font-size: 2rem;
+    font-weight: 600;
+    color:var(--brand-color-shade-5);
+  }
+ .empty-img{
+     width: 400px;
+     height: 400px
+
+ } 
+ .error-page{
+     display:flex;
+     align-items: center;
+ }
+ .error-page button{
+     background-color:var(--black-6);
+     color:white;
+ }
+ .error-text{
+     color:var(--brand-color-shade-5);
+     font-weight: 600;
+     font-size: 2rem;
+ }

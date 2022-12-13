@@ -1,0 +1,74 @@
+
+header{
+    position: sticky;
+    background-color:white;
+    display: flex;
+    padding:var(--spacing-2-5) var(--spacing-2);
+    align-items: center;
+    width: 100%;
+    height: 8rem;
+    z-index:5;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+}
+.left-area{
+    padding:10px;
+}
+.left-area .logo{
+width: 10rem;
+height:8rem;
+}
+header .nav-icons div{
+    height: 3.5rem;
+    width: 3.5rem;
+    line-height: 3.5rem;
+    border-radius: 50%;
+    color:var(--black-5);
+    font-size: 2rem;
+    background-color: var(--brand-color-shade-1);
+    margin-left: var(--spacing-10x);
+    cursor: pointer;
+    text-align: center;
+}
+.icon-badge{
+    padding: 10px;
+    background-color:var(--brand-color-shade-4);
+}
+header .search-form{
+    position: absolute;
+    top:101%; right:-200%;
+    width: 50rem;
+    height:4rem;
+    background-color: var(--black-1);
+    border-radius:var(--spacing-5);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--brand-color-shade-4);
+    box-shadow: var(--box-shadow);
+}
+
+header .search-form.active{
+    right:0;
+    transition: .4s linear;
+}
+
+header .search-form input{
+    height:100%;
+    width:100%;
+    font-size: 1.6rem;
+    color:var(--text-primary-color);
+    padding:0 var(--spacing-1-5);
+    flex-wrap: wrap;
+    outline: none;
+    border: none;
+}
+
+header .search-form label{
+    font-size: 1.8rem;
+    padding-right: var(--spacing-1-5);
+    color:var(--black-4);
+    cursor: pointer;
+}

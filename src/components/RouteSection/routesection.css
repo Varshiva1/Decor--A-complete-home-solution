@@ -1,0 +1,9 @@
+.route-section{
+    background-color: var(--brand-color-shade-2);
+    padding: 2.3rem;
+    margin-top: 10px;
+}
+.route-section span{
+    color: var(--brand-color-shade-6);
+    cursor: pointer;
+}

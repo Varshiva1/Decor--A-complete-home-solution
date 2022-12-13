@@ -1,0 +1,7 @@
+@import "styles/base.css";
+@import "styles/reset.css";
+
+.main-section{
+    min-height: calc(100vh - 10rem);
+  position: relative;
+}

@@ -1,0 +1,22 @@
+.order-details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.order-details h2{
+    margin-top: 2rem;
+    color: var(--brand-color-shade-6);
+}
+.order-delivery-detail{
+    min-width: 30%;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--brand-color-shade-1);
+}
+.order-item-details{
+    background-color: var(--black-2);
+    width: 40%;
+}

@@ -1,0 +1,52 @@
+
+.price_details {
+    background-color: var(--black-1);
+    margin: 0 auto;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.price_details .item, .total, .coupon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price_details .item {
+    margin-bottom: 10px;
+}
+.discount-text{
+    color: var(--card-rating);
+}
+.price_details .coupon {
+    margin-top: 2rem;
+}
+
+.price_details .total {
+    padding-top: 1rem;
+    border-top: 1px solid var(--black-3);
+    font-weight: 700;
+    margin-top: 2rem;
+}
+
+/* .price_details .coupon a {
+    color: #ff3f6c;
+    background-color: #efefef;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.price_details .coupon a:hover {
+    font-weight: 700;
+} */
+
+.checkout {
+    padding:var(--spacing-10x) var(--spacing-1-5);
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.checkout_btn{
+    width: 100%;
+    display: block;
+}

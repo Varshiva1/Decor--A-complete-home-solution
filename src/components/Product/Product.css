@@ -1,0 +1,95 @@
+.product-box{
+    position: relative;
+    background: var(--card-bg-color);
+    overflow: hidden;
+    display: flex;
+    border-radius: 3px;
+    width: 26rem;
+    height: fit-content;
+    flex-direction: column;
+}
+
+.product-box .image {
+    height: 30rem;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .product-box .card-rating{
+ 
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    background-color:var(--card-rating);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-4x);
+    border-radius: var(--spacing-5x);
+    font-size: 1.3rem;
+    top:57%;
+    left:  var(--spacing-5x);
+}
+.product-box .card-tag{
+ 
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  background-color:var(--highlight-text-color);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-4x);
+  border-radius: var(--spacing-3x);
+  font-size: 1.3rem;
+  top:2%;
+  right:  var(--spacing-3x);
+}
+
+.product-desc {
+    padding: var(--spacing-10x) var(--spacing-1-5);
+  }
+  
+.product-desc .product-heading{
+    display: flex;
+    align-items: center;
+}
+.product-heading a{
+    margin-left: auto;
+    font-size: 2rem;
+    color: var(--black-4);
+}
+.product-heading i:hover{
+    color: var(--brand-color-shade-5);
+}
+
+.product-desc strong { 
+    font-size: 1.7rem;
+    color: var(--black-5);
+    padding: var(--spacing-0-5) 0 ;
+  }
+  
+  .product-btn-container{
+    padding: var(--spacing-1) 0;
+    display: flex;
+    justify-content:center;
+    text-align: center;
+  }
+  .btn {
+    margin-top: var(--spacing-1);
+    font-size: 1.5rem;
+    width:90%;
+    font-family: inherit;
+}
+.add-btn-icon{
+  font-size: var(--spacing-2-3);
+  margin-left:var(--spacing-1) ;
+}
+
+.btn:hover {
+    background: var(--secondary-color);
+
+}
+.wishlist-toogle{
+  color: var(--brand-color-shade-5);
+}

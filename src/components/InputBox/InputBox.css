@@ -1,0 +1,24 @@
+
+.input-group{
+    margin-bottom: 10px;
+    width: 100%;
+}
+.input-group__label{
+    color:var(--black-6);
+    display: block;
+    font-size: var(--spacing-1-6);
+    margin-bottom: var(--spacing-7x);
+    font-weight: 600;
+}
+.input-group__input{
+    border: none;
+        width: 100%;
+        padding: 1.3rem;
+        background-color: inherit;
+        border-radius: 3px;
+        border: 1px solid var(--brand-color-shade-6);
+        font-size: var(--spacing-1-5);
+}
+.input-group__input:focus{
+    outline: none;
+}

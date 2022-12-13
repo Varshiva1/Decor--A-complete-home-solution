@@ -1,0 +1,40 @@
+
+.hero__section{
+    width: 100%;
+    height: calc(100vh - 8rem);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.hero-content{
+    position:absolute;
+    left: 6%;
+    display: flex;
+    flex-direction: column;
+    top: 40%;
+    gap: 10px;
+    z-index: 1;
+}
+.hero-title{
+    font-size: 3.5rem;
+    color: var(--brand-color-shade-6);
+}
+.hero-sub-title{
+    font-size: 1.7rem;
+}
+.block-btn{
+    width: 30%;
+    padding:1.4rem;
+    text-align: center;
+}
+.heading-1:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3rem;
+    background-image: url(../../../assets/hr.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: -10px;
+}

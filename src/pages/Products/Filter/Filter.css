@@ -1,0 +1,153 @@
+.filter-heading{
+  display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.clear-btn{
+  margin-left: auto;
+  margin-bottom: var(--spacing-1-5);
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 8px ;
+  border-radius: 5px;
+  background-color: rgb(36, 76, 76,0.2) ;
+  cursor:pointer;
+}
+.clear-btn:hover{
+background-color: rgba(0, 0, 0, 0.12);
+}
+
+.input-group {
+    margin-bottom: var(--spacing-3);
+  }
+  label{
+    font-size: 1.5rem;
+    transition: 0.5s;
+  }
+  .label {
+    margin-bottom: var(--spacing-1-5);
+    font-weight: 600;
+    font-size: 1.8rem;
+    display: block;
+  }
+  .filter-block{
+    display:flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding:8px 0 ;
+   }
+  
+  .toogle-list input[type="radio"]:checked + .rating-label{
+    background-color: var(--brand-color-shade-4);
+    color: var(--white);
+    box-shadow: 0 15px 45px rgba(24,249,141,0.2);
+  }
+  
+  .slider-input{
+    width: 100%;
+  }
+   .input-rating[type="radio"]{
+    -webkit-appearance:none;
+    
+  }
+  .toogle-list{
+    display: flex;
+    justify-content: space-between;
+  }
+  .rating-label{
+      height: max-content;
+      width: max-content;
+      border:var(--spacing-1x) solid rgba(0, 0, 0, 0.12);
+      position: relative;
+      border-radius: var(--spacing-5x);
+      padding:var(--spacing-10x);
+      transition: 0.5s;
+      background-color: var(--white);
+      color:rgba(0, 0, 0, 0.37);
+  }
+  
+  input[type="radio"]{
+    -webkit-transform: scale(1.2);
+  }
+  
+/* custom checkbox */
+
+.category_filterbox input[type="checkbox"]{
+  appearance:none;
+   content: "\2714";
+   width: 1.3rem;
+   height: 1.3rem;
+   background:whitesmoke;
+   border-radius:1px;
+   cursor:pointer;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   border: 1px solid var(--light-color);
+   
+ }
+ .category_filterbox input[type="checkbox"]:after{
+   content:"\f00c";
+   font-family:"Font Awesome 5 Free";
+   font-weight:900;
+   font-size:0.78rem;
+   color:var(--black-1);
+   display:none;
+    transition: all 0.2s ease;
+ }
+ .category_filterbox input[type="checkbox"]:checked{
+  border: 1px solid var(--brand-color-shade-5);
+   background-color: var(--brand-color-shade-6);
+ }
+ .category_filterbox input[type="checkbox"]:checked:after{
+   display:block;
+   transform: scale(1);
+ }
+
+ .category_filterbox input[type="checkbox"]{
+  -webkit-transform: scale(1.2);
+}
+
+
+/* custom radio button */
+
+.price-sort input[type="radio"]{
+  appearance:none;
+   content: "";
+   width: 1.3rem;
+   height: 1.3rem;
+   background:whitesmoke;
+   cursor:pointer;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   border-radius:50%;
+   border: 1px solid var(--light-color);
+ }
+ .price-sort input[type="radio"]:after{
+   content:"";
+   height:7px;
+   width:7px;
+   border-radius:100%;
+   background:var(--brand-color-shade-6);
+   display:none;
+   transition: all 0.2s ease;
+ }
+
+ .price-sort input[type="radio"]:checked{
+   background:var(--black-1);
+   border: 1px solid var(--brand-color-shade-5);
+   
+ }
+ input[type="radio"]:checked:after{
+   display:block;  
+ transform: scale(1);
+ }
+
+   
+  
+  
+  
+  

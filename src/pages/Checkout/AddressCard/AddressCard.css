@@ -1,0 +1,71 @@
+.radio-item [type="radio"]{
+    display: none;
+}
+.radio-item{
+    margin-top: 15px;
+}
+.radio-item label{
+    display: block;
+    padding: 1rem 3rem 1rem 6rem;
+    background:white;
+    border:1px solid var(--black-3);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 400;
+    width: 70%;
+    white-space: no-wrap;
+    position: relative;
+}
+.radio-item label p{
+margin-top: 5px;
+}
+
+.radio-item label p span{
+    padding:4px;
+    margin-left: 10px;
+    background-color: var(--black-3);
+    border-radius: 3px;
+    color: var(--black-1);
+    font-size: 1.4rem;
+}
+.radio-item label:after,
+.radio-item label:before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.radio-item label:after{
+    height: 2rem;
+    width: 2rem;
+    border:2px solid var(--brand-color-shade-5);
+    left: 2rem;
+    top: calc(50% - 12px);
+}
+.radio-item label:before{
+    background: var(--brand-color-shade-5);
+    height: 10px;
+    width: 10px;
+    left: 2.5rem;
+    top: calc(50% - 7px);
+    transform: scale(5);
+    transition: .4s ease-in-out 0s;
+    opacity: 0;
+    visibility: hidden;
+}
+.radio-item [type="radio"]:checked ~ label{
+    border:2px solid var(--brand-color-shade-4);
+}
+
+.radio-item [type="radio"]:checked ~ label:before{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+@media (max-width:594px) {
+    .radio-item label{
+        width: 90%;
+    }
+}

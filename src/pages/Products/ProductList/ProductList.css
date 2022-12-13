@@ -1,0 +1,19 @@
+.products-grid{
+    display: flex;
+    align-items: center;
+   justify-content: space-evenly;
+    margin-top: 5rem;
+    gap:var(--spacing-2);
+    width: 100%;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+
+.alert-container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+  .right-side{
+  width: auto;
+   }
