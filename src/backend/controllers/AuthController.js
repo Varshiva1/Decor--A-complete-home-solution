@@ -15,15 +15,13 @@ const jwt = require("jsonwebtoken");
  * body contains {firstName, lastName, email, password}
  * */
 
-export const signupHandler = function (schema, request) {
+export const signupHandler = async function ( request,res) {
   const { email, password, ...rest } = JSON.parse(request.requestBody);
   try {
     // check if email already exists
-    const foundUser = schema.users.findBy({ email });
+    const foundUser = res.users.findBy({ email });
     if (foundUser) {
-      return new Response(
-        422,
-        {},
+      return new Response( 422,{},
         {
           errors: ["Unprocessable Entity. Email Already Exists."],
         }
@@ -42,21 +40,12 @@ export const signupHandler = function (schema, request) {
       wishlist: [],
       address: [],
     };
-    const createdUser = schema.users.create(newUser);
-    const encodedToken = jwt.sign(
-      { _id, email },
-      process.env.REACT_APP_JWT_SECRET
-    );
+    const createdUser = res.users.create(newUser);
+    const encodedToken = jwt.sign(  { _id, email },
+      process.env.REACT_APP_JWT_SECRET);
     return new Response(201, {}, { createdUser, encodedToken });
   } catch (error) {
-    return new Response(
-      500,
-      {},
-      {
-        error,
-      }
-    );
-  }
+    return new Response( 500, {}, {   error, }  ); }
 };
 
 /**
@@ -65,10 +54,10 @@ export const signupHandler = function (schema, request) {
  * body contains {email, password}
  * */
 
-export const loginHandler = function (schema, request) {
+export const loginHandler = async function (request,res) {
   const { email, password } = JSON.parse(request.requestBody);
   try {
-    const foundUser = schema.users.findBy({ email });
+    const foundUser = res.users.findBy({ email });
     if (!foundUser) {
       return new Response(
         404,
@@ -84,22 +73,8 @@ export const loginHandler = function (schema, request) {
       foundUser.password = undefined;
       return new Response(200, {}, { foundUser, encodedToken });
     }
-    new Response(
-      401,
-      {},
-      {
-        errors: [
-          "The credentials you entered are invalid. Unauthorized access error.",
-        ],
-      }
-    );
+    new Response(401,{},{
+    errors: ["The credentials you entered are invalid. Unauthorized access error.",  ], }  );
   } catch (error) {
-    return new Response(
-      500,
-      {},
-      {
-        error,
-      }
-    );
-  }
+    return new Response(500,{},{error, } )}
 };
