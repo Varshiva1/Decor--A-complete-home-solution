@@ -171,31 +171,43 @@ export const signupOnServer = async (userDetails, authDispatch, navigate) => {
 export const loginToServer = async (userDetails, authDispatch, navigate) => {
     const toastId = toast.loading("Logging in...");
     try {
-        const {data:{foundUser,encodedToken},status} = await axios.post(signinUrl,
-            {
-                email: userDetails.email,
-                password: userDetails.password
-            });
+        const response = await axios.post(signinUrl, {
+            email: userDetails.email,
+            password: userDetails.password
+        });
+
+        const { data: { foundUser, encodedToken }, status } = response;
+
         if (status === 200) {
             toast.success(`Hello, ${foundUser.firstName}. Welcome back!`, {
                 id: toastId,
                 icon: "👋",
-              });
-            localStorage.setItem("sessiontoken",encodedToken)
-            authDispatch({ type: authActions.AUTH, payload: { user:foundUser, token:encodedToken } })
-           
-            setTimeout(()=> {
-                 navigate(-1);
-               }, 1000);
-            
+            });
+
+            localStorage.setItem("sessiontoken", encodedToken);
+            authDispatch({ type: authActions.AUTH, payload: { user: foundUser, token: encodedToken } });
+
+            // Dismiss the loading toast
+            toast.dismiss(toastId);
+
+            setTimeout(() => {
+                navigate(-1);
+            }, 1000);
+        } else {
+            toast.error("The credentials you entered are invalid. Try Again.", {
+                id: toastId,
+            });
         }
     } catch (error) {
-        toast.error("Some error occured in login. Try Again.", {
+        toast.error("Some error occurred in login. Try Again.", {
             id: toastId,
-          });
-          authDispatch({ type:authActions.AUTHERROR, payload: error.response });
+        });
+        authDispatch({ type: authActions.AUTHERROR, payload: error.response });
     }
-}
+};
+
+
+
 
 export const addAddress = async (token, dispatch, address) => {
     try {
